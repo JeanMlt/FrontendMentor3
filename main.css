@@ -1,0 +1,152 @@
+/* Basic @font-face declaration */
+@font-face {
+    font-family: WorkSans-Bold;
+    src: url("assets/fonts/static/WorkSans-Bold.ttf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: WorkSans-SemiBold;
+    src: url('assets/fonts/static/WorkSans-SemiBold.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: WorkSans-Regular;
+    src: url('assets/fonts/static/WorkSans-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  :root {
+    /* Color palette */
+    --color-white: #ffffff;
+    --color-light-pink: #f9f0ff;
+    --color-grayish-purple: #8c6991;
+    --color-dark-purple: #2f1533;
+    --color-purple-highlight: #9e26d9;
+  }
+  
+  /* Using the custom font in your CSS */
+  body {
+    font-family: 'MyCustomFont', Arial, sans-serif;
+  }
+  
+
+html{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+body {
+    background-image:url('/assets/images/background-pattern-desktop.svg');
+    background-position:top;
+    background-repeat:repeat-x;
+    background-size: 150% ;
+    background-color: var(--color-light-pink);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+    /* Remove the 30px margin you had */
+}
+
+.accordionBox {
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    width: 80%;
+    background-color: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Header section styling */
+.accordionTitle {
+    display: inline-flex;
+}
+
+.accordionBox h1 {
+    font-family: 'WorkSans-Bold';
+    margin-top: 10px;
+    margin-left: 10px;
+
+}
+
+.accordionBox .starIcon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+
+}
+
+.accordionContent {
+    width: 100%;
+}
+
+.accordionQuestion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    text-align: inherit;
+    cursor: pointer;
+    width : 100%;
+    
+    
+}
+
+
+.accordionQuestion h2 {
+    color:#321734;
+    font-family: 'WorkSans-SemiBold';
+    font-size: 16px;
+    margin: 0;
+}
+
+.highlighted {
+    color: var(--color-purple-highlight) !important;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: var(--color-purple-highlight);
+}
+
+
+.accordionQuestion img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Styling for accordion answers */
+[class^="accordionAnswer"] {
+    display: none;
+    padding: 10px 0 20px;
+    line-height: 1.5;
+    font-family: "WorkSans-Regular";
+    color: #333;
+    border-bottom: 1px solid #e0e0e0;
+}
+.expanded{
+    display: block;
+}
+
+.attribution {
+    margin-top: 20px;
+    font-size: 12px;
+    text-align: center;
+}
+
